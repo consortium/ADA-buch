@@ -23,16 +23,16 @@
     src : url(../fonts/NotoSans-BoldItalic.ttf);
 }
 -@font-face {
-    font-family : -apple-system,BlinkMacSystemFont,"noto sans medium",helvetica neue,helvetica,roboto,"segoe ui",arial,sans-serif;
+    font-family : -apple-system,BlinkMacSystemFont,"noto sans",helvetica neue,helvetica,roboto,"segoe ui",arial,sans-serif;
     font-weight : normal;
     font-style: normal;
     src : url(../fonts/NotoSans-Medium.ttf);
 }
 -@font-face {
-    font-family : -apple-system,BlinkMacSystemFont,"noto sans medium",helvetica neue,helvetica,roboto,"segoe ui",arial,sans-serif;
+    font-family : -apple-system,BlinkMacSystemFont,"noto serif",helvetica neue,helvetica,roboto,"segoe ui",arial,sans-serif;
     font-weight : normal;
     font-style: normal;
-    src : url(../fonts/NotoSans-Medium.ttf);
+    src : url(../fonts/NotoSerif-Regular.ttf);
 }
 
 
@@ -168,7 +168,7 @@ video {
 }
 
 html {
-  font-family: -apple-system,BlinkMacSystemFont,"noto sans",helvetica neue,helvetica,roboto,"segoe ui",arial,sans-serif;
+  font-family: -apple-system,BlinkMacSystemFont,"noto serif",helvetica neue,helvetica,roboto,"segoe ui",arial,sans-serif;
   font-weight: normal;
   font-size: 10.75pt;
   color: black;
@@ -176,7 +176,7 @@ html {
 }
 
 p {
-  font-family: -apple-system,BlinkMacSystemFont,"noto sans",helvetica neue,helvetica,roboto,"segoe ui",arial,sans-serif;
+  font-family: -apple-system,BlinkMacSystemFont,"noto serif",helvetica neue,helvetica,roboto,"segoe ui",arial,sans-serif;
   font-size: 9pt;
   line-height: 14pt;
   /*text-align: justify;*/
@@ -295,10 +295,12 @@ blockquote {
 
 blockquote:before {
   font-family: -apple-system,BlinkMacSystemFont,"noto sans",helvetica neue,helvetica,roboto,"segoe ui",arial,sans-serif;
-  content: '';
-  font-size: 3em;
-  top: -0.2pc;
-  left: -1.2pc;
+  content: open-quote;
+  font-size: 2em;
+  left: 15px;
+  top: -15px;
+  /*top: -0.2pc;
+  left: -1.2pc;*/
   position: absolute;
   color: #7089ab;
   opacity: 0.6;
@@ -306,8 +308,8 @@ blockquote:before {
 
 blockquote:after {
   font-family: -apple-system,BlinkMacSystemFont,"noto sans",helvetica neue,helvetica,roboto,"segoe ui",arial,sans-serif;
-  content: '';
-  font-size: 3em;
+  content: close-quote;
+  font-size: 1em;
   bottom: -15pt;
   right: -0.8pc;
   position: absolute;
@@ -331,11 +333,12 @@ h5,
 h6 {
   font-family: -apple-system,BlinkMacSystemFont,"noto sans medium",helvetica neue,helvetica,roboto,"segoe ui",arial,sans-serif;
   margin-top: 1.5em;
-  color: black;
+  color: rgb(15,100,167);
   font-weight: normal;
 }
 
 h1 {
+  font-family : -apple-system,BlinkMacSystemFont,"noto serif medium",helvetica neue,helvetica,roboto,"segoe ui",arial,sans-serif;
   font-weight: bold;
   font-size: 24pt;
   color: rgb(58,172,196);
@@ -350,7 +353,7 @@ h1 {
   -epub-hyphens: none;
   hyphens: none;
   letter-spacing: 0pt;
-word-spacing: 1px;
+  word-spacing: 1px;
 }
 
 h2 {
@@ -396,7 +399,6 @@ h5 {
 
 body {
   counter-reset: chapter;
-  word-wrap: break-word;
   overflow-wrap: break-word;
 }
 
@@ -459,9 +461,6 @@ figure img {
   margin: auto;
 }
 
-/*figure img figure-cat-figure {
-  width: 200px;
-}*/
 
 figure figcaption {
   font-family: -apple-system,BlinkMacSystemFont,"noto sans",helvetica neue,helvetica,roboto,"segoe ui",arial,sans-serif;
@@ -534,21 +533,11 @@ a {
 
 
 /*styles IMG TABLES*/
-.rotate-180 {
-    -webkit-transform: rotate(270deg);
-        -ms-transform: rotate(270deg);
-            transform: rotate(270deg);
-}
 
-.pagebreak {
-page-break-inside: avoid;
-page-break-after: avoid;
-
-}
 
 table {
   margin: 0 auto;
-  width: 95% !important;
+  width: 99% !important;
   font-family: -apple-system,BlinkMacSystemFont,"noto sans",helvetica neue,helvetica,roboto,"segoe ui",arial,sans-serif;
   background-size: 8pt;
   page-break-inside: avoid;
@@ -562,12 +551,15 @@ table {
   font-size: 8pt;
 }
 
+
+
 table caption {
-  /*border-top: 1pt solid #435772;
-  border-bottom: 1pt solid #435772;*/
+  /*border-top: 1px solid rgb(231,231,231);
+  border-bottom: 1px solid #435772;*/
   padding: 1em;
   text-align: left;
   margin: 0 auto;
+  vertical-align: middle;
 }
 
 table caption:before {
@@ -577,15 +569,21 @@ table caption:before {
   font-style: italic;
 }
 
+
 table td {
   width: auto;
   border-left: 0;
   border-right: 0;
-  text-align: right;
+  /*text-align: right;*/
+  border-bottom: 1px solid rgb(231,231,231);
+  padding: 0.5em;
+
 }
 
 table td a {
- word-break: break-all; /*break words*/
+ /*word-break: break-all; break words url*/
+ word-wrap: break-word;
+ overflow-wrap: break-word;
 }
 
 table td:last-of-type {
@@ -608,10 +606,17 @@ table ul {
   list-style-position: inside;
 }
 
-tr:first-of-type th,
-tr:first-of-type td {
+tr:first-of-type th {
   padding-top: 1em;
   padding-bottom: 1em;
+
+}
+
+tr:first-of-type td {
+  font-style: italic;
+  background-color: rgb(241,248,250);
+  border-bottom: 2px solid rgb(15,100,167);
+
 }
 
 tr:last-of-type td {
@@ -628,17 +633,18 @@ th {
   padding: 1em;
   color: : black;
   font-style: italic;
-  font-weight: normal;
 }
 
 tr:first-of-type {
-  /*border-bottom: 1pt solid #435772;*/
+    font-weight: normal;
 }
 
-tr:first-of-type td {
-  font-weight: normal;
+/*tr:first-of-type td {
   font-style: italic;
-}
+  font-weight: bold;
+  backgroung-color: rgb(215,238,243);
+  border-bottom: 2px solid #435772;
+}*/
 
 tr.head + tr td {
   padding-top: 0.8em;
@@ -760,7 +766,7 @@ section[data-type="toc"] ul li {
   margin-left: 0;
   text-indent: 0;
   letter-spacing: 0.2pt;
-word-spacing: 0px;
+  word-spacing: 0px;
 }
 
 section[data-type="toc"] ul li p {
@@ -774,21 +780,22 @@ section[data-type="toc"] ul li:before {
 
 section[data-type="toc"] a {
   color: black;
-  font-weight: 300;
+  font-weight: 500;
   border-bottom: 0px solid transparent;
   background: none;
   text-shadow: none;
-  font-family: -apple-system,BlinkMacSystemFont,"noto sans",helvetica neue,helvetica,roboto,"segoe ui",arial,sans-serif;
+  /*font-family: -apple-system,BlinkMacSystemFont,"noto sans",helvetica neue,helvetica,roboto,"segoe ui",arial,sans-serif;*/
 }
 
 section[data-type="toc"] a:after {
   content: "123";
-  font-style: normal;
-  font-family: -apple-system,BlinkMacSystemFont,"noto sans",helvetica neue,helvetica,roboto,"segoe ui",arial,sans-serif;
+  font-weight: 500;
+  /*font-family: -apple-system,BlinkMacSystemFont,"noto sans",helvetica neue,helvetica,roboto,"segoe ui",arial,sans-serif;*/
   margin-left: 10em;
   content: target-counter(attr(href, url), page);
   display: inline-block;
   float: right;
+  font-size: 10pt;
 }
 
 [data-name="cabbagetree"] {
