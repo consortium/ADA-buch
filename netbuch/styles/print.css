@@ -229,6 +229,24 @@ li b {
   font-weight: 500;
 }
 
+.colophon {
+  font-family: -apple-system,BlinkMacSystemFont,"noto sans",helvetica neue,helvetica,roboto,"segoe ui",arial,sans-serif;
+  font-size: 10pt;
+}
+
+.colophon p + p {
+  text-indent: 0;
+}
+
+section[data-type="kolophon"] {
+  font-family: -apple-system,BlinkMacSystemFont,"noto sans",helvetica neue,helvetica,roboto,"segoe ui",arial,sans-serif;
+  font-size: 10pt;
+  page-break-before: always;
+}
+
+section[data-type="kolophon"]  p + p {
+  text-indent: 0;
+
 em,
 .italic {
   font-family: inherit;
