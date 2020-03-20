@@ -910,7 +910,11 @@ section[data-type="chaptertitle"] {
 }
 
 section[data-type="chapter"], {
- break-after: always;;
+ break-after: always;
+}
+
+section[data-type="frontmatter"], {
+ break-after: always;
 }
 
 h2 {
