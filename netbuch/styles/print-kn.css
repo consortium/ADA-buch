@@ -28,13 +28,6 @@
     font-style: normal;
     src : url(../fonts/NotoSans-Medium.ttf);
 }
--@font-face {
-    font-family : -apple-system,BlinkMacSystemFont,"noto sans medium",helvetica neue,helvetica,roboto,"segoe ui",arial,sans-serif;
-    font-weight : normal;
-    font-style: normal;
-    src : url(../fonts/NotoSans-Medium.ttf);
-}
-
 
 h3.titlepageSub {
   color: black;
@@ -336,9 +329,9 @@ h6 {
 }
 
 h1 {
-  font-weight: bold;
+  font-weight: normal;
   font-size: 24pt;
-  color: rgb(58,172,196);
+  color: black;
   margin-bottom: 2em;
   margin-top: 2em;
   page-break-inside: avoid;
@@ -396,8 +389,6 @@ h5 {
 
 body {
   counter-reset: chapter;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
 }
 
 .one ol li {
@@ -532,20 +523,6 @@ a {
   text-decoration: none;
 }
 
-
-/*styles IMG TABLES*/
-.rotate-180 {
-    -webkit-transform: rotate(270deg);
-        -ms-transform: rotate(270deg);
-            transform: rotate(270deg);
-}
-
-.pagebreak {
-page-break-inside: avoid;
-page-break-after: avoid;
-
-}
-
 table {
   margin: 0 auto;
   width: 95% !important;
@@ -582,10 +559,6 @@ table td {
   border-left: 0;
   border-right: 0;
   text-align: right;
-}
-
-table td a {
- word-break: break-all; /*break words*/
 }
 
 table td:last-of-type {
@@ -749,8 +722,7 @@ section[data-type="toc"] h4 {
   margin-top: 1.2em;
   margin-bottom: 0em;
   letter-spacing: 0.2pt;
-  word-spacing: 1px;
-  font-size: 10pt;
+word-spacing: 1px;
 }
 
 section[data-type="toc"] ul li {
@@ -817,7 +789,7 @@ section[data-type="toc"] a:after {
 }
 
 [data-name="1phase_colour_big"] {
-  width: 100%;
+  width: 100% !important;
   text-align: center;
   margin-bottom: 12pt;
   margin-top: 12pt;
