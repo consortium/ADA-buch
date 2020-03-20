@@ -913,7 +913,7 @@ section[data-type="chapter"], {
  break-after: always;
 }
 
-section[data-type="frontmatter"], {
+section[data-type="frontmatter"] {
  break-after: always;
 }
 
@@ -1042,6 +1042,18 @@ h2 {
   -epubx-utilization: 0;
   @-epubx-partition toc {
     -epubx-flow-from: toc;
+    -epubx-required: true;
+    left: -epubx-expr( page-number % 2==1 ? 10mm: 10mm);
+    right: -epubx-expr( page-number % 2==0 ? 10mm: 12mm);
+    top: 15mm;
+    bottom: 20mm;
+  }
+}
+
+@-epubx-page-master frontmatter {
+  -epubx-utilization: 0;
+  @-epubx-partition frontmatter {
+    -epubx-flow-from: frontmatter;
     -epubx-required: true;
     left: -epubx-expr( page-number % 2==1 ? 10mm: 10mm);
     right: -epubx-expr( page-number % 2==0 ? 10mm: 12mm);
