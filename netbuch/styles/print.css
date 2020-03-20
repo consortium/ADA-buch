@@ -995,12 +995,16 @@ h2 {
   -epubx-flow-into: colophon;
 }
 
+[data-type="frontmatter"] {
+  -epubx-flow-into: frontmatter;
+}
+
 [data-type="toc"] {
   -epubx-flow-into: toc;
 }
 
 .logo {
-  -epubx-flow-into:  logo;
+  -epubx-flow-into: logo;
 }
 
 /* pages layout */
