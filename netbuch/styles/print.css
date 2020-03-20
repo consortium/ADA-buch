@@ -251,6 +251,7 @@ a {
 
 a:hover {
   color: black;
+  text-decoration: 1px solid black;
 }
 
 strong em {
