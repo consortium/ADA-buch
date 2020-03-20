@@ -789,7 +789,7 @@ section[data-type="toc"] a:after {
 }
 
 [data-name="1phase_colour_big"] {
-  width: 100%;
+  width: 100% !important;
   text-align: center;
   margin-bottom: 12pt;
   margin-top: 12pt;
