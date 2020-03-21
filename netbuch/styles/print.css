@@ -255,7 +255,7 @@ p b,
 li strong,
 li .bold,
 li .Bold,
-li b{
+li b {
   font-weight: 700;
 }
 
