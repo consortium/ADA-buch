@@ -1045,6 +1045,11 @@ h2 {
   background-size: cover;
 }
 
+@-epubx-page-master second-page-backcover {
+  -epubx-page: 84;
+  background-size: cover;
+}
+
 
 @-epubx-page-master titlepagepage {
   @-epubx-partition body {
