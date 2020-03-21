@@ -1074,35 +1074,6 @@ h2 {
   background-size: cover;
 }
 
-@-epubx-page-master second-page-backcover {
-  -epubx-page: 60;
-  background-size: cover;
-}
-
-@-epubx-page-master second-page-backcover {
-  -epubx-page: 84;
-  background-size: cover;
-}
-
-@-epubx-page-master second-page-backcover {
-  -epubx-page: 98;
-  background-size: cover;
-}
-
-@-epubx-page-master second-page-backcover {
-  -epubx-page: 102;
-  background-size: cover;
-}
-
-@-epubx-page-master second-page-backcover {
-  -epubx-page: 108;
-  background-size: cover;
-}
-
-@-epubx-page-master second-page-backcover {
-  -epubx-page: 114;
-  background-size: cover;
-}
 
 @-epubx-page-master titlepagepage {
   @-epubx-partition body {
