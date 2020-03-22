@@ -1140,7 +1140,7 @@ h2 {
 }
 
 @-epubx-page-master first-page-cover {
-  -epubx-page: 1;
+  -epubx-page: 124;
   background: url("../images/back-cover.jpg");
   background-size: cover;
 }
