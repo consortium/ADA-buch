@@ -1052,6 +1052,17 @@ h2 {
   top: 9mm;
 }
 
+.footerurl {
+  height: 13pt;
+  position: absolute;
+  content: "DOI: https://doi.org/10.25815/h0ec-f967";
+  bottom: 8mm;
+  text-align: center;
+  font-family: -apple-system,BlinkMacSystemFont,"noto sans",helvetica neue,helvetica,roboto,"segoe ui",arial,sans-serif;
+  font-size: 9pt;
+  font-style: italic;
+}
+
 /* flows */
 
 [data-type="chaptertitle"] {
@@ -1266,6 +1277,17 @@ h2 {
     -epubx-enabled: -epubx-expr( page-number % 2==1 ? 'true': 'false');
     right: 15mm;
   }
+
+  /* footer url left */
+   @-epubx-partition class(footerurl) {
+      -epubx-enabled: -epubx-expr( page-number % 2==0 ? 'true': 'false');
+      left: 55mm;
+    }
+    /* footer url right */
+   @-epubx-partition class(footerurl) {
+      -epubx-enabled: -epubx-expr( page-number % 2==1 ? 'true': 'false');
+      left: 40mm;
+    }  
 
   /* vertical ok */
   /*   @-epubx-partition headervertical {
