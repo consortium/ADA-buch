@@ -54,8 +54,8 @@
     src : url(../fonts/NotoSans-ExtraBold.ttf);
 }
 
-.noindent p + p {
-  text-indent: 0;
+.noindent .indent p + p {
+  text-indent: 1.5em;
 }
 
 h3.titlepageSub {
