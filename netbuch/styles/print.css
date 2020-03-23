@@ -57,6 +57,9 @@
 .noindent p + p {
   text-indent: 0;
 }
+.noindent .indent p + p {
+  text-indent: 1.5em;
+}
 
 h3.titlepageSub {
   color: black;
@@ -1287,7 +1290,7 @@ h2 {
    @-epubx-partition class(footerurl) {
       -epubx-enabled: -epubx-expr( page-number % 2==1 ? 'true': 'false');
       left: 40mm;
-    }  
+    }
 
   /* vertical ok */
   /*   @-epubx-partition headervertical {
